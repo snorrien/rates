@@ -1,0 +1,19 @@
+
+.app__page{
+background: #454d55;
+
+}
+
+
+.app__data{
+    padding: 3rem;
+    background-color: white;
+    margin: auto;
+    width: 80rem;
+    max-width: 95%;
+}
+
+.app__end{
+    padding: 1rem;
+    text-align: center;
+}
