@@ -1,20 +1,23 @@
 import React from "react";
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import GetCharts from  "../Services/ChartsApi";
 
-function Chart() {
-    const dataOne = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
-    const dataTwo = [{ name: 'Page B', uv: 500, pv: 2500, amt: 2500 }];
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, } from 'recharts';
+
+function Chart(props) {
     return (
         <div>
-            <LineChart width={600} height={300} data={dataOne} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-                <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+            <LineChart width={600} height={300} data={props.data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+                <Line dataKey="eur" type="monotone" stroke="#8884d8" />
+                <Line dataKey="usd" type="monotone" stroke="#82ca9d" />
+
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-                <XAxis dataKey="name" />
+                <XAxis dataKey="date" />
                 <YAxis />
                 <Tooltip />
             </LineChart>
         </div>
     )
+    
 }
 
 export default Chart;

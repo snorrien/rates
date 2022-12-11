@@ -32,7 +32,7 @@ function OfficialRates(props) {
                     </table>
                 </div>
                 <div className={classes.chart__official_rates}>
-                    <Chart />
+                    <Chart data={props.charts}/>
                 </div>
             </div>
         </div>

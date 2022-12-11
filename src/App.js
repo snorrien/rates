@@ -5,9 +5,11 @@ import NavbarHead from './NavbarHead/NavbarHead';
 import OfficialRates from './OfficialRates/OfficialRates';
 import GetRates from "./Services/RatesApi";
 import ExchangeRates from "./ExchangeRates/ExchangeRates";
+import GetCharts from "./Services/ChartsApi";
 
 function App() {
   const result = GetRates();
+  const charts = GetCharts();
 
   console.log(result);
   return (
@@ -19,7 +21,7 @@ function App() {
 
 
         <div className='app__official-rates'>
-          <OfficialRates date={result.date} euro={result.averageEuro} dollar={result.averageDollar} />
+          <OfficialRates charts={charts.points} date={result.date} euro={result.averageEuro} dollar={result.averageDollar} />
         </div>
         <div className={classes.app__rates}>
           <ExchangeRates rates={result.rates}/>
