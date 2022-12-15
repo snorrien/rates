@@ -1,8 +1,11 @@
 
-
-.header__inside{
-    padding-left: 8rem;
+.container_navbar{
+height: auto;
+background-color: blueviolet;
+color: white
 }
+
+
 
 @media (max-width: 600){
     .header__inside {

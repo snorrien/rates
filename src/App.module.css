@@ -1,11 +1,10 @@
-
-.app__page{
-background: #454d55;
+.app__page {
+    background: #454d55;
 
 }
 
 
-.app__data{
+.app__data {
     padding: 3rem;
     background-color: white;
     margin: auto;
@@ -13,7 +12,22 @@ background: #454d55;
     max-width: 95%;
 }
 
-.app__end{
+.app__data_chart {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+@media (max-width: 600px) {
+    .app__data_chart {
+        display: block;
+        max-width: 100%;
+
+
+    }
+}
+
+.app__end {
     padding: 1rem;
     text-align: center;
 }
