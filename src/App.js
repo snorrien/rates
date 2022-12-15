@@ -27,7 +27,7 @@ function App() {
       <ErrorBoundary>
         <div className={classes.app__data_chart}>
         <div className='app__official-rates'>
-          <OfficialRates date={result.date} euro={result.averageEuro} dollar={result.averageDollar} arryUp={charts.points}/>
+          <OfficialRates date={result.date} euro={result.averageEuro} dollar={result.averageDollar} points={charts.points}/>
         </div>
           <div className={classes.chart__official_rates}>
             <Chart charts={charts.points} />
