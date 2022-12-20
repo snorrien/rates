@@ -1,0 +1,59 @@
+
+.app {
+    background-color: white;
+    margin: auto;
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+   
+}
+
+.app_navbar{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+
+
+.data__official_rates{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 3;
+    margin: 1em
+}
+
+.chart__official_rates{
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-column-end: 5;
+}
+
+.rate__exchangeRates{
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-column-end: 5;
+    margin: 3em
+}
+
+@media screen and (max-width: 700px){
+    .data__official_rates{
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-column-end: 5;
+        margin: 0,5;
+    }
+    .chart__official_rates{
+        grid-column-start: 1;
+        grid-row-start: 3;
+        grid-column-end: 5;
+        margin: 0,5;
+     
+    }
+    .rate__exchangeRates{
+        grid-column-start: 1;
+        grid-row-start: 4;
+        grid-column-end: 5;
+        margin: 0,5;
+    }
+}
+

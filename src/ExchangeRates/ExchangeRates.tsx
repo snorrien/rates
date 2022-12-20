@@ -1,8 +1,13 @@
 import React from "react";
 import Round from "../Services/Round";
 import { useTranslation } from "react-i18next";
+import { Rate } from "../Interfaces/Rate";
 
-function ExchangeRates(props) {
+export interface Props {
+    rates: Rate[];
+}
+
+const ExchangeRates: React.FC<Props> = (props) => {
     const { t } = useTranslation();
 
     return (
@@ -11,14 +16,18 @@ function ExchangeRates(props) {
                 <h1>{t("Rates")}</h1>
             </div>
 
-            <table class="table table-hover">
-                <thead class="table-dark">
+            <table className="table table-hover table-bordered">
+                <thead className="table-dark">
                     <tr>
-                        <th scope="col">{t("exchange office")}</th>
-                        <th scope="col">EUR</th>
+                        <th scope="col" rowSpan={2}>{t("exchange office")}</th>
+                        <th colSpan={2} scope="col">EUR</th>
+                        <th colSpan={2} scope="col">USD</th>
+                   
+                    </tr>
+                    <tr>
+                    
                         <th scope="col">{t("buy")}</th>
                         <th scope="col">{t("sell")}</th>
-                        <th scope="col">USD</th>
                         <th scope="col">{t("buy")}</th>
                         <th scope="col">{t("sell")}</th>
                     </tr>
@@ -28,10 +37,8 @@ function ExchangeRates(props) {
                         props.rates?.map((rate) =>
                             <tr>
                                 <th scope="col">{rate.companyName}</th>
-                                <th scope="col">EUR</th>
                                 <td scope="col">{Round(rate.euro.buy)}</td>
                                 <td scope="col">{Round(rate.euro.sell)}</td>
-                                <th scope="col">USD</th>
                                 <td scope="col">{Round(rate.dollar.buy)}</td>
                                 <td scope="col">{Round(rate.dollar.sell)}</td>
                             </tr>

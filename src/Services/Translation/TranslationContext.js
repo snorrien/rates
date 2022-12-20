@@ -5,6 +5,7 @@ const TranslationValue = React.createContext({
   locale: 'en',
   setLocale: () => { }
 })
+export default TranslationValue;
 
 export const TranslationValueProvider = (props) => {
   const [locale, setLocale] = useState(i18n.language);
@@ -17,4 +18,3 @@ export const TranslationValueProvider = (props) => {
 }
 
 
-export default TranslationValue;
