@@ -40,7 +40,7 @@ function NavbarHead() {
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li><a className="dropdown-item" id="btnEng" onClick={() => changeLocale('en')}>English</a></li>
             <li><a className="dropdown-item" id="btnRus" onClick={() => changeLocale('ru')}>Русский</a></li>
-            <li><a className="dropdown-item" id="btnSrb" onClick={() => changeLocale('srb')}>Srpski</a></li>
+            <li><a className="dropdown-item" id="btnSrb" onClick={() => changeLocale('rs')}>Srpski</a></li>
           </ul>
         </div>
       </div>

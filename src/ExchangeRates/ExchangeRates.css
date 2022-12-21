@@ -1,11 +1,1 @@
-.table{
-        margin:5rem;
-        padding: 10rem;
-    }
 
-@media (max-width: 600px) 
-{
-    .table-rates{
-        margin:1em;
-    }
-}
