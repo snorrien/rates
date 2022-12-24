@@ -13,10 +13,12 @@ import ErrorBoundary from "./Services/ErrorBoundary";
 
 
 
+
+
 function App() {
   const result = GetRates();
   const charts = GetCharts();
-
+ 
 
   return (
     <React.Fragment>
@@ -24,7 +26,7 @@ function App() {
         <div className="app_navbar">
           <NavbarHead />
         </div>
-        
+        <div className="colored">
           <ErrorBoundary>
             <div className="data__official_rates">
               <OfficialRates date={result?.date} euro={result?.averageEuro} dollar={result?.averageDollar} points={charts?.points} />
@@ -34,6 +36,7 @@ function App() {
             </div>
 
           </ErrorBoundary>
+          </div>
 
           <Suspense fallback={<Loading />}>
             <div className="rate__exchangeRates">
