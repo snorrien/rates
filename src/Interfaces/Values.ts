@@ -1,4 +1,4 @@
 export interface Values {
-    buy: number,
-    sell: number
+    buy: string,
+    sell: string
 }

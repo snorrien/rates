@@ -1,11 +1,12 @@
-import React, {useState, useTranslation} from "react";
+import React, {Dispatch, SetStateAction, useState} from "react";
 import i18n from "./i18n";
 
 const TranslationValue = React.createContext({
   locale: 'en',
-  setLocale: () => { }
+  setLocale: ()=> {}
 })
 export default TranslationValue;
+
 
 export const TranslationValueProvider = (props) => {
   const [locale, setLocale] = useState(i18n.language);
@@ -13,6 +14,7 @@ export const TranslationValueProvider = (props) => {
 
   return <TranslationValue.Provider 
   value={{locale, setLocale}}>
+ 
     {props.children}
   </TranslationValue.Provider>
 }

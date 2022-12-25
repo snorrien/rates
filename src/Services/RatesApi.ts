@@ -3,7 +3,7 @@ import { RatesResult } from "../Interfaces/RatesResult";
 import HttpGet from "./HttpGet";
 
 
-function GetRates() : RatesResult | unknown {
+function GetRates() : RatesResult {
   return HttpGet('rates');
 }
 

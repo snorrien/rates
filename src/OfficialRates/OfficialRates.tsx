@@ -1,9 +1,14 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import "./OfficialRates.css";
-import Trend from "./Trend";
 
-function OfficialRates(props) {
+export interface Props {
+    date: string,
+    euro: number,
+    dollar: number
+}
+
+const OfficialRates: React.FC<Props> = (props) => {
     const { t } = useTranslation();
 
     return (
@@ -25,12 +30,10 @@ function OfficialRates(props) {
                     <tr>
                         <th>EUR</th>
                         <td>{props.euro}</td>
-                        <td><Trend points={props.points} /></td>
                     </tr>
                     <tr>
                         <th>USD</th>
                         <td>{props.dollar}</td>
-                        <td><Trend points={props.points} /></td>
                     </tr>
                 </tbody>
             </table>

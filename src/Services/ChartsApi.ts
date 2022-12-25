@@ -2,7 +2,7 @@ import { ChartsResult } from "../Interfaces/ChartsResult";
 import HttpGet from "./HttpGet";
 
 
-function GetCharts() : ChartsResult | unknown{
+function GetCharts() : ChartsResult {
   return HttpGet('charts');
 }
 
