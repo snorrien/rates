@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import "./NavbarHead.css";
 import { useTranslation } from "react-i18next";
 import TranslationValue from "../Services/Translation/TranslationContext";
 import i18n from "../Services/Translation/i18n";
 import logoRu from "./Images/ru.png";
 import logoEn from "./Images/en.png";
 import logoRs from "./Images/rs.png";
+import "./NavbarHead.scss";
 
 
 function NavbarHead() {
@@ -28,14 +28,14 @@ function NavbarHead() {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-primary">
       <div className="container-fluid">
 
         <a className="navbar-brand" href="#">Serbia Rates</a>
 
         <div className="dropdown">
           <img className="flag" src={logo} id="flagShow"></img>
-          <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <button className="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             {t('language')}
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">

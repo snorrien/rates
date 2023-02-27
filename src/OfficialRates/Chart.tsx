@@ -16,7 +16,7 @@ const Chart:  React.FC<Props> = (props) => {
     return (
         <div className="chart">
             <div className="chart-container">
-                <ResponsiveContainer width="90%" height={300}>
+                <ResponsiveContainer width="100%" height={300}>
                     <LineChart data={props.points} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
                         <Line dataKey="EUR" type="monotone" stroke="#8884d8" />
                         <Line dataKey="USD" type="monotone" stroke="#82ca9d" />

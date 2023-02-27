@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./style.css"
 import './App.css';
 import './NavbarHead/NavbarHead';
 import NavbarHead from './NavbarHead/NavbarHead';
@@ -12,7 +12,7 @@ import Chart from "./OfficialRates/Chart";
 function App() {
   const result = GetRates();
   const charts = GetCharts();
- 
+
 
   return (
     <React.Fragment>
@@ -20,16 +20,19 @@ function App() {
         <div className="app_navbar">
           <NavbarHead />
         </div>
-            <div className="data__official_rates">
-              <OfficialRates date={result?.date} euro={result?.averageEuro} dollar={result?.averageDollar} />
-            </div>
-            <div className="chart__official_rates">
-              <Chart points={charts?.points} />
-            </div>
-            <div className="rate__exchangeRates">
-              <ExchangeRates rates={result?.rates} />
-            </div>
-        </div>   
+        
+        <div className="chart__official_rates">
+          <Chart points={charts?.points} />
+        </div>
+        <div className="data__official_rates">
+          <OfficialRates date={result?.date} euro={result?.averageEuro} dollar={result?.averageDollar} />
+        </div>
+        
+    
+        <div className="rate__exchangeRates">
+          <ExchangeRates rates={result?.rates} />
+        </div>
+      </div>
     </React.Fragment>
   )
 }
