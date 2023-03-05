@@ -40,13 +40,17 @@
         grid-column-start: 1;
         grid-row-start: 2;
         grid-column-end: 5;
-        margin: 0,5;
+        margin: 0;
+    }
+
+    .app_navbar{
+        margin-bottom: 20px;
     }
     .chart__official_rates{
         grid-column-start: 1;
         grid-row-start: 3;
         grid-column-end: 5;
-        margin: 0,5;
+        margin: 0;
     }
     .rate__exchangeRates{
         grid-column-start: 1;

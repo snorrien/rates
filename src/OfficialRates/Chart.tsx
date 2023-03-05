@@ -9,7 +9,7 @@ export interface Props {
     points: Point[];
 }
 
-const Chart:  React.FC<Props> = (props) => {
+const Chart: React.FC<Props> = (props) => {
     const max = 150;
     const min = 70;
 

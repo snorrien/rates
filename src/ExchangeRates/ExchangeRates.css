@@ -1,1 +1,9 @@
 
+@media screen and (max-width: 700px){
+    .table-dark{
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-column-end: 5;
+        margin: 0,5;
+    }
+}

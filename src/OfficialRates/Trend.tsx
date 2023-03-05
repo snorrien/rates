@@ -1,9 +1,14 @@
 import React from "react";
+import { Point } from "../Interfaces/Point";
 
-const Trend = (props) => {
-    const points = [props.points];
+export interface Props {
+    points: Point[];
+}
+
+const Trend: React.FC<Props> = (props) => {
+    const points = props.points;
     if (!points || points.length < 2) {
-        return;
+        return null;
     }
         
     const lastValue = points[points.length - 1].USD;

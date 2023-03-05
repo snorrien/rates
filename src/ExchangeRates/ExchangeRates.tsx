@@ -17,7 +17,7 @@ const ExchangeRates: React.FC<Props> = (props) => {
                     <h1>{t("Rates")}</h1>
                 </div>
 
-                <table className="table table-hover table-bordered ">
+                <table className="table table-hover table-bordered table-responsive">
                     <thead className="table-dark">
                         <tr>
                             <th scope="col" rowSpan={2}>{t("exchange office")}</th>
