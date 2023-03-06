@@ -1,7 +1,7 @@
 import { Values } from "./Values";
 
-export interface Rate {
-    companyName: string,
-    euro: Values,
-    dollar: Values
+export class Rate {
+    companyName!: string;
+    euro!: Values;
+    dollar!: Values;
 }

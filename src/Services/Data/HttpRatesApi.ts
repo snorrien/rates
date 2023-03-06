@@ -1,9 +1,10 @@
 import { RatesResult } from "../../Interfaces/RatesResult";
 import HttpGet from "../HttpGet";
+import { RateApi } from "./RateApi"; 
 
-
-function GetRates() : RatesResult {
-  return HttpGet('rates');
+export class HttpRatesApi implements RateApi {
+  getRates(): RatesResult {
+    return HttpGet('rates');
+  }
 }
 
-export default GetRates;

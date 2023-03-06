@@ -1,6 +1,6 @@
 import { RatesResult } from "../../Interfaces/RatesResult";
 
 
-interface DataProvider {
+export interface RateApi {
     getRates(): RatesResult;
 }

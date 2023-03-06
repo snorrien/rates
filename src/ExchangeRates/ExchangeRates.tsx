@@ -36,7 +36,7 @@ const ExchangeRates: React.FC<Props> = (props) => {
                     <tbody>
                         {
                             props.rates?.map((rate) =>
-                                <tr>
+                                <tr key={rate.companyName}>
                                     <th scope="col">{rate.companyName}</th>
                                     <td scope="col">{Round(rate.euro.buy)}</td>
                                     <td scope="col">{Round(rate.euro.sell)}</td>

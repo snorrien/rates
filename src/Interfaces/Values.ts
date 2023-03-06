@@ -1,4 +1,4 @@
-export interface Values {
-    buy: string,
-    sell: string
+export class Values {
+    buy!: string;
+    sell!: string;
 }

@@ -4,15 +4,17 @@ import './App.css';
 import './NavbarHead/NavbarHead';
 import NavbarHead from './NavbarHead/NavbarHead';
 import OfficialRates from './OfficialRates/OfficialRates';
-import GetRates from "./Services/Data/HttpRatesApi";
+import { MockRatesApi } from "./Services/Data/MockRatesApi";
 import ExchangeRates from "./ExchangeRates/ExchangeRates";
-import GetCharts from "./Services/Data/HttpChartsApi";
+import { MockChartsApi } from "./Services/Data/MockChartsApi";
 import Chart from "./OfficialRates/Chart";
 
 function App() {
-  const result = GetRates();
-  const charts = GetCharts();
+  const ratesApi = new MockRatesApi();
+  const chartsApi = new MockChartsApi();
 
+  const result = ratesApi.getRates();
+  const charts = chartsApi.getCharts();
 
   return (
     <React.Fragment>
