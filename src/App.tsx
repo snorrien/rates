@@ -4,9 +4,9 @@ import './App.css';
 import './NavbarHead/NavbarHead';
 import NavbarHead from './NavbarHead/NavbarHead';
 import OfficialRates from './OfficialRates/OfficialRates';
-import GetRates from "./Services/RatesApi";
+import GetRates from "./Services/Data/HttpRatesApi";
 import ExchangeRates from "./ExchangeRates/ExchangeRates";
-import GetCharts from "./Services/ChartsApi";
+import GetCharts from "./Services/Data/HttpChartsApi";
 import Chart from "./OfficialRates/Chart";
 
 function App() {
